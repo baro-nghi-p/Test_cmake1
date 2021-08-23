@@ -1,0 +1,27 @@
+echo "Github manage !"
+echo "Clone (1) or Init (2) or Sorry (3)"
+	read selection
+echo $selection
+case $selection in
+	1)
+		echo "Link Github"
+		read link
+		echo "$link"		
+		echo "git clone....."
+		git clone $link
+		;;
+	2)
+		echo "Link Github"
+		read link
+		echo "$link"
+		echo "git init...."
+		git init
+		echo "git remote"
+		git remote add origin $link
+		;;
+	3)
+		echo "Sorry, it's my mistake"
+		;;
+	*)
+		;;
+esac
